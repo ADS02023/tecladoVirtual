@@ -120,9 +120,8 @@ function renderKeyboard() {
                     //que es el carácter en minúscula o especial.
                     : key[0]
                 }</button>`;
-
         });
-    });
+    });//fin array flecha
 
     // Agrega una tecla vacía al final de la primera fila (layers[0]).
     layers[0].push(empty);
@@ -151,6 +150,7 @@ function renderKeyboard() {
         // Luego, agrega la representación HTML de la fila actual al interior de este div.
         keyboardContainer.innerHTML += `<div class="layer">${layer}</div>`;
     });
+
 
     // Selecciona todos los elementos HTML con la clase "key".
     document.querySelectorAll(".key").forEach((key) => {
@@ -198,8 +198,8 @@ function renderKeyboard() {
                 // Enfoca nuevamente en el elemento de entrada actual.
                 current.focus();
             }
-        });
-    });
+        });//fin del listener
+    });//fin de la funcion flecha
 
     // Selecciona todos los elementos HTML de tipo "input".
     document.querySelectorAll("input").forEach((input) => {
@@ -211,5 +211,4 @@ function renderKeyboard() {
             current = e.target;
         });
     });
-
-}
+}//fin de la funcion renderKeyboard
